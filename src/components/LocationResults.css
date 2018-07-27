@@ -1,0 +1,37 @@
+.list {
+    background-color: #FFF;
+    border-radius: 3spx;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list__item {
+    padding: 10px;
+    color: #222222;
+}
+
+.list__item:hover {
+    background-color: #addbff;
+    cursor: pointer;
+}
+
+.location-type-badge {
+    padding: 3px 5px;
+    border-radius: 3px;
+    text-align: center;
+    min-width: 50px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #000;
+    color: #FFF;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+.location-address {
+    display: block;
+    font-size: 13px;
+    color: #989898;
+}

@@ -15,4 +15,5 @@
 .location-finder input {
   padding: 7px 12px;
   width: 100%;
+  border: 1px solid #d3d3d3;
 }
