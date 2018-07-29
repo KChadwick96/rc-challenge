@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import LocationResults from './components/LocationResults';
+import { updatedLocationTerm } from './actions';
+
 import './App.css';
 
 const TEMP_RESULTS = [{
@@ -16,6 +19,7 @@ const TEMP_RESULTS = [{
 class App extends Component {
 
   findResults(event) {
+    this.props.dispatch(updatedLocationTerm(event.target.value));
     console.log(event.target.value);
   }
 
@@ -43,4 +47,11 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    loading: state.loading,
+    locations: state.locations
+  };
+};
+
+export default connect(mapStateToProps)(App);

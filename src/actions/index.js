@@ -2,13 +2,13 @@ export const UPDATED_LOCATION_TERM = 'UPDATED_LOCATION_TERM';
 export const LOCATIONS_RESULT = 'LOCATIONS_RESULT';
 export const LOCATIONS_ERROR = 'LOCATIONS_RESULT';
 
-export const fetchLocations = term => ({
-    type: FETCH_LOCATIONS,
+export const updatedLocationTerm = term => ({
+    type: UPDATED_LOCATION_TERM,
     term
 });
 
-export const fetchLocationsSuccess = response => ({
-    type: FETCH_LOCATIONS_SUCCESS,
+export const locationsResult = response => ({
+    type: LOCATIONS_RESULT,
     locations: response.results.docs
 });
 
