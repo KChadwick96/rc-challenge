@@ -14,9 +14,10 @@ const reducer = (state = initialState, action) => {
             }
 
         case LOCATIONS_RESULT:
+            const results = action.response.results;
             return {
                 loading: false,
-                locations: action.response.results.docs
+                locations: results.numFound > 0 ? results.docs : []
             }
             
         default:

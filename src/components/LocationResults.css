@@ -10,7 +10,7 @@
     padding: 10px;
     color: #222222;
     line-height: 14px;
-    font-size: 14px;
+    font-size: 15px;
     border-radius: 2px;
     border-bottom: 1px solid #d3d3d3;
 }
@@ -29,7 +29,7 @@
     border-radius: 3px;
     text-align: center;
     min-width: 50px;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: bold;
     background-color: #000;
     color: #FFF;
@@ -40,6 +40,6 @@
 
 .location-address {
     display: block;
-    font-size: 11px;
+    font-size: 13px;
     color: #989898;
 }
