@@ -20,7 +20,6 @@ class SearchWidget extends Component {
 
     findResults = event => {
         this.props.dispatch(updatedLocationTerm(event.target.value));
-        console.log(event.target.value);
     }
 
     render() {

@@ -6,10 +6,3 @@ export const updatedLocationTerm = term => ({
     type: UPDATED_LOCATION_TERM,
     term
 });
-
-export const locationsResult = response => ({
-    type: LOCATIONS_RESULT,
-    locations: response.results.docs
-});
-
-// TODO: Add LOCATIONS_ERROR
