@@ -1,0 +1,15 @@
+.search-container {
+    background-color: #f5d361;
+    padding: 20px;
+}
+  
+.location-finder label {
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+  
+.location-finder input {
+    padding: 7px 12px;
+    width: 100%;
+    border: 1px solid #d3d3d3;
+}
