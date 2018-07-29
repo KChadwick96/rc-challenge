@@ -1,4 +1,4 @@
-import { takeEvery, call, put } from 'redux-saga/effects';
+import { takeLatest, call, put } from 'redux-saga/effects';
 
 import { UPDATED_LOCATION_TERM, LOCATIONS_RESULT, LOCATIONS_ERROR } from '../actions';
 
@@ -16,5 +16,5 @@ function* fetchLocations(action) {
 }
 
 export default function* rootSaga() {
-    yield takeEvery(UPDATED_LOCATION_TERM, fetchLocations);
+    yield takeLatest(UPDATED_LOCATION_TERM, fetchLocations);
 }

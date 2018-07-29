@@ -5,10 +5,13 @@ import './LocationResults.css';
 const LOCATION_TYPES = {
     C: 'City',
     S: 'Station',
-    A: 'Airport'
+    A: 'Airport',
+    D: 'District'
 };
 
-const LocationResults = ({results}) => {
+const LocationResults = ({results, open}) => {
+    if (!open) return null;
+
     let resultsHtml;
     if (!results || results.length === 0) {
         resultsHtml = <li className="list__item">No Results Found</li>;

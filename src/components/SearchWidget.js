@@ -6,14 +6,31 @@ import { updatedLocationTerm } from '../actions';
 
 import './SearchWidget.css';
 
+const MIN_TERM_LENGTH = 2;
+
 class SearchWidget extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            term: '',
+            showResults: false
+        };
+    }
+
     findResults = event => {
-        this.props.dispatch(updatedLocationTerm(event.target.value));
+        const term = event.target.value;
+        this.setState({term});
+
+        if (term && term.length >= MIN_TERM_LENGTH) {
+            this.props.dispatch(updatedLocationTerm(event.target.value));
+        }
     }
 
     render() {
-        console.log(this.props);
+        const resultsVisible = this.props.locations.length > 0 || this.state.term.length >= MIN_TERM_LENGTH;
+
         return (
             <div className="search-container">
                 <h2>Where are you going?</h2>
@@ -27,7 +44,7 @@ class SearchWidget extends Component {
                     />
 
                     <div className="results-container">
-                        <LocationResults results={this.props.locations} />
+                        <LocationResults results={this.props.locations} open={resultsVisible} />
                     </div>
                 </div>
             </div>
