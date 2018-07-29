@@ -1,7 +1,7 @@
 import { UPDATED_LOCATION_TERM, LOCATIONS_RESULT } from '../actions';
 
 const initialState = {
-    loadingLocations: false,
+    loading: false,
     locations: []
 };
 
@@ -15,7 +15,7 @@ const reducer = (state = initialState, action) => {
 
         case LOCATIONS_RESULT:
             return {
-                loadingLocations: false,
+                loading: false,
                 locations: action.response.results.docs
             }
             

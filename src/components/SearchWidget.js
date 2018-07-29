@@ -6,16 +6,6 @@ import { updatedLocationTerm } from '../actions';
 
 import './SearchWidget.css';
 
-const TEMP_RESULTS = [{
-    type: 'station',
-    name: 'Manchester Piccadilly',
-    address: 'Somewhere Rd, Manchester'
-}, {
-    type: 'airport',
-    name: 'Manchester Airport',
-    address: 'Somewhere else St, Manchester'
-}]
-
 class SearchWidget extends Component {
 
     findResults = event => {
@@ -23,6 +13,7 @@ class SearchWidget extends Component {
     }
 
     render() {
+        console.log(this.props);
         return (
             <div className="search-container">
                 <h2>Where are you going?</h2>
@@ -36,7 +27,7 @@ class SearchWidget extends Component {
                     />
 
                     <div className="results-container">
-                        <LocationResults results={TEMP_RESULTS} />
+                        <LocationResults results={this.props.locations} />
                     </div>
                 </div>
             </div>
